@@ -103,6 +103,9 @@ Total Arm Reach: ~210 mm
 
 # Repository Structure
 
+docs/blueprints/system_architecture.md
+Robot hardware and software architecture diagram
+
 LilBuddy-V1
 
 cad
