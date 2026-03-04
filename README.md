@@ -1,378 +1,287 @@
-# \# Lil Buddy V1 🤖
+# Lil Buddy V1 🤖
 
-# 
+Lil Buddy V1 is a modular humanoid AI robot designed and built by student engineers.
 
-# Lil Buddy V1 is a humanoid AI robot designed and built by student engineers.
+The project focuses on creating a robotics platform capable of vision, voice interaction, and physical movement using high torque servo motors and AI computing hardware.
 
-# 
+Lil Buddy is designed as an expandable robotics system that can evolve into multiple specialized robots for different applications.
 
-# This project focuses on building a modular robotics platform capable of vision, voice interaction, and physical movement using servo actuators.
+Possible applications include:
 
-# 
+• Robotics engineering education  
+• AI assistant robots  
+• Healthcare assistant robots  
+• Cybersecurity monitoring robots  
+• Smart home robotics systems  
 
-# The goal of Lil Buddy is to serve as a foundation for multiple AI robotics applications such as:
+---
 
-# 
+# Robot Overview
 
-# • Robotics engineering education
+Lil Buddy V1 is a **24 inch humanoid robot** powered by an **NVIDIA Jetson Orin Nano AI computer**.
 
-# • AI assistants
+The robot includes:
 
-# • Healthcare support robots
+• AI vision system  
+• Voice interaction  
+• Dual camera "eyes"  
+• Moving robotic arms  
+• Chest display interface  
+• Modular electronics architecture  
 
-# • Cybersecurity AI monitoring tools
+Future versions will include **walking legs and advanced autonomy**.
 
-# • Smart home robotics
+---
 
-# 
+# Core Hardware
 
-# ---
+### AI Computer
+NVIDIA Jetson Orin Nano
 
-# 
+### Servo Control
+PCA9685 16-Channel PWM Servo Driver
 
-# \# Robot Overview
+### Servo Motors
+DS3218 High Torque Digital Servos
 
-# 
+### Power System
+4S LiPo Battery (14.8V)
 
-# Lil Buddy V1 is a \*\*24 inch humanoid robot\*\* powered by an \*\*NVIDIA Jetson Orin Nano\*\*.
+Power rails:
 
-# 
+• 14.8V → 5V buck converter (Jetson and logic electronics)  
+• 14.8V → 6V buck converter (servo power rail)
 
-# The robot includes:
+### Display
+10.1" LCD HDMI touchscreen mounted in the chest
 
-# 
+### Vision System
+Dual cameras mounted inside the robot head
 
-# • AI vision system
+### Audio System
+Internal speaker system for voice output
 
-# • voice interaction
+### Robot Structure
+3D printed components designed in **Autodesk Fusion 360**
 
-# • dual camera eyes
+Printed using **Bambu Lab P1S 3D Printer**
 
-# • moving arms
+---
 
-# • chest display interface
+# Robot Dimensions
 
-# • modular electronics system
+Total Height  
+24 inches (610 mm)
 
-# 
+### Torso
 
-# Future versions will include \*\*walking legs and advanced autonomy\*\*.
+Width: 220 mm  
+Height: 300 mm  
+Depth: 110 mm  
 
-# 
+### Head
 
-# ---
+Height: ~150 mm  
+Eye spacing: 60–70 mm  
 
-# 
+### Arm Structure
 
-# \# Core Hardware
+Upper Arm: 80 mm  
+Forearm: 80 mm  
+Hand: 50 mm  
 
-# 
+Total Arm Reach: ~210 mm
 
-# Brain
+### Shoulder System
 
-# NVIDIA Jetson Orin Nano
+2 Degrees of Freedom
 
-# 
+• Forward / Back swing  
+• Arm lift up / down  
 
-# Servo Driver
+---
 
-# PCA9685 16-Channel PWM Controller
-
-# 
-
-# Servos
-
-# DS3218 High Torque Servos
-
-# 
-
-# Power System
-
-# 4S LiPo Battery
-
-# Buck converters for regulated power rails
-
-# 
-
-# Display
-
-# 10.1" LCD chest display
-
-# 
-
-# Vision
-
-# Dual camera system
-
-# 
-
-# Audio
-
-# Internal speaker system
-
-# 
-
-# 3D Printed Body
-
-# Printed using \*\*Bambu Lab P1S\*\*
-
-# 
-
-# ---
-
-# 
-
-# \# Robot Dimensions
-
-# 
-
-# Total Height
-
-# 24 inches (610 mm)
-
-# 
-
-# Torso
-
-# 220mm x 300mm x 110mm
-
-# 
-
-# Arm Structure
-
-# Upper Arm: 80mm
-
-# Forearm: 80mm
-
-# Hand: 50mm
-
-# 
-
-# Shoulder System
-
-# 2 DOF
-
-# 
-
-# • Forward / Back swing
-
-# • Arm lift up and down
-
-# 
-
-# Total Arm Reach
-
-# 210mm
-
-# 
-
-# ---
-
-# 
-
-# \# Repository Structure
-
-
+# Repository Structure
 
 LilBuddy-V1
 
-
-
 cad
-
-Fusion360 files, STL exports, and mechanical drawings
-
-
+Fusion 360 designs, STL files, STEP files and mechanical drawings
 
 docs
-
-engineering documentation and blueprints
-
-
+Engineering documentation, blueprints and build notes
 
 electronics
-
-schematics and wiring diagrams
-
-
+Wiring diagrams and schematics
 
 hardware
-
-mechanical assemblies and robot components
-
-
+Mechanical assembly information
 
 software
-
-Jetson control software and AI modules
-
-
+Robot control software and AI modules
 
 media
-
-images and videos of the robot
-
-
-
-
+Images and videos of the robot
 
 ---
 
+---
 
+# Software Modules
 
-\# Software Modules
+### Jetson Control
+Jetson system configuration and robotics runtime environment
 
+### Servo Control
+PWM control system using PCA9685
 
+### Vision System
+Computer vision using AI models and cameras
 
-Jetson Control  
+### Voice System
+Speech recognition and voice synthesis
 
-Jetson system configuration and robotics runtime
-
-
-
-Servo Control  
-
-PWM control using PCA9685
-
-
-
-Vision System  
-
-Computer vision and object detection
-
-
-
-Voice System  
-
-Speech recognition and voice output
-
-
-
-User Interface  
-
-Chest display interface and robot status system
-
-
+### User Interface
+Robot display interface and system status display
 
 ---
 
+# Development Roadmap
 
+### Version 1
 
-\# Development Roadmap
-
-
-
-V1 Goals
-
-
-
-• Functional upper body robot  
-
+• Functional humanoid upper body  
 • AI vision system  
-
-• Voice assistant capability  
-
-• Moving arms  
-
+• Voice interaction  
+• Moving robotic arms  
 • Chest display interface  
 
+### Version 2
 
+• Walking humanoid robot  
+• Balance and locomotion control  
 
-Future Versions
+### Version 3
 
-
-
-V2  
-
-Walking humanoid robot
-
-
-
-V3  
-
-Full autonomous AI assistant robot
-
-
+• Fully autonomous AI assistant robot
 
 ---
 
+# 3D Printed Components
 
+Lil Buddy V1 is designed in **Autodesk Fusion 360** and printed using a **Bambu Lab P1S 3D Printer**.
 
-\# Hardware Platform
+The robot uses a **modular design** so components can be upgraded or replaced easily.
 
+---
 
+## Body Structure
 
-Lil Buddy V1 is built using a modular robotics architecture allowing upgrades without redesigning the entire robot.
+1. Head shell – outer robot head housing  
+2. Head back cover – removable access panel  
+3. Camera eye mounts – holds dual cameras  
+4. Neck turret base – rotating base between head and torso  
+5. Neck servo mount – bracket for neck servo  
 
+---
 
+## Torso Assembly
 
-This makes it ideal for:
+6. Torso front shell – chest housing with display opening  
+7. Torso rear cover – removable electronics access panel  
+8. Chest display frame – mount for 10.1" display  
+9. Jetson mounting plate – mount for Jetson Orin Nano  
+10. Battery tray – holder for LiPo battery  
+11. Speaker mount – internal audio mount  
 
+---
 
+## Shoulder System
 
-• robotics research  
+12. Left shoulder turret base  
+13. Right shoulder turret base  
+14. Shoulder bearing support housing  
+15. Shoulder servo mount bracket  
+16. Shoulder outer shell cover  
 
-• engineering education  
+---
 
+## Arm Assembly
+
+17. Upper arm shell (left)  
+18. Upper arm shell (right)  
+19. Elbow joint bracket  
+20. Forearm shell (left)  
+21. Forearm shell (right)  
+22. Wrist servo mount  
+23. Robot hand base plate  
+24. Finger mount bracket (optional gripper)
+
+---
+
+## Internal Electronics Mounts
+
+25. PCA9685 mounting plate  
+26. Buck converter mounting bracket  
+27. Power distribution mount  
+28. Wire routing clips  
+29. Cooling fan mount  
+30. Cable management bracket  
+
+---
+
+## Future Expansion (V2 Legs)
+
+31. Hip interface mount plate  
+32. Hip servo mount brackets  
+33. Upper leg housing  
+34. Knee joint bracket  
+35. Lower leg housing  
+36. Foot base plate  
+
+Estimated printed parts for Lil Buddy V1 upper body: **~30 parts**
+
+Estimated printed parts for full humanoid version: **~36–40 parts**
+
+---
+
+# Hardware Platform Philosophy
+
+Lil Buddy V1 is designed using a **modular robotics architecture**.
+
+This allows the robot to be upgraded without redesigning the entire system.
+
+The platform is ideal for:
+
+• Robotics research  
+• Engineering education  
 • AI experimentation  
-
-• rapid prototyping  
-
-
+• Rapid prototyping  
 
 ---
 
-
-
-\# Project Vision
-
-
+# Project Vision
 
 Lil Buddy represents the beginning of a larger robotics ecosystem focused on accessible AI robotics development.
 
+The long-term goal is to create:
 
-
-The long term goal is to create:
-
-
-
-• specialized AI robots  
-
-• open robotics education platforms  
-
-• modular AI robotics kits  
-
-
+• Specialized AI robots  
+• Open robotics education platforms  
+• Modular robotics kits  
 
 ---
 
-
-
-\# License
-
-
+# License
 
 MIT License
 
-
-
 ---
 
-
-
-\# Author
-
-
+# Author
 
 Gregory Livingston  
-
 Robotics Engineering Student  
-
 Houston Community College
 
-
-
-Project: Lil Buddy Robotics
-
-
-
+Project: **Lil Buddy Robotics**
